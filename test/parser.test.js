@@ -14,7 +14,7 @@ test('should parse 12/200 correctly', () => {
 
 test('should parse 1/2+3/4 correctly', () => {
     const equation = parser.parseEquation('1/2+3/4');
-    expect(equation.left).toBe('1/2');
-    expect(equation.right).toBe('3/4');
+    expect(equation.firstFraction).toBe('1/2');
+    expect(equation.secondFraction).toBe('3/4');
     expect(equation.operator).toBe('+');
 });

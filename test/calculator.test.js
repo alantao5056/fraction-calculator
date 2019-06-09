@@ -1,10 +1,15 @@
-const calculator = require('../src/calculator');
+const { addFraction } = require('../src/calculator');
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(calculator.add(1, 2)).toBe(3);
-});
-
-test('adds 2 + 3 to eual 5', () => {
-    const sum = calculator.add(2, 3);
-    expect(sum).toBe(5);
+test('should add fraction: 3/4, 2/3 correctly', () => {
+    expect(addFraction(
+        {
+            numerator: 3,
+            denominator: 4
+        }, {
+            numerator: 2,
+            denominator: 3
+        })).toStrictEqual({
+            numerator: 17,
+            denominator: 12
+        });
 });
