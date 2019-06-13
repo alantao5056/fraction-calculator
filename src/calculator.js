@@ -14,6 +14,22 @@ const addFraction = function (fraction1, fraction2) {
     };
     return simplifier.simplify(result);
   }
+};
+
+const subtractFraction = function (fraction1, fraction2) {
+  if (fraction1.denominator === fraction2.denominator) {
+    const result = {
+      numerator: fraction1.numerator - fraction2.numerator,
+      denominator: fraction1.denominator
+    };
+    return simplifier.simplify(result);
+  } else {
+    const result = {
+      numerator: fraction1.numerator * fraction2.denominator - fraction1.denominator * fraction2.numerator,
+      denominator: fraction1.denominator * fraction2.denominator
+    };
+    return simplifier.simplify(result);
+  }
 }
 
-module.exports = { addFraction };
+module.exports = { addFraction, subtractFraction };

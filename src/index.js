@@ -11,7 +11,7 @@ const main = async function () {
   if (equation.operator === "+") {
     result = calculator.addFraction(firstF, secondF);
   } else if (equation.operator === "-") {
-    // result = calculator
+    result = calculator.subtractFraction(firstF, secondF);
   }
 
   console.log(`${equationString}=${result.numerator}/${result.denominator}`);
