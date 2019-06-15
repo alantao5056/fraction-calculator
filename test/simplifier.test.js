@@ -1,41 +1,41 @@
-const { simplify } = require('../src/simplifier');
+const simplify = require('../src/simplifier');
 
-test('should simplify 46/34 correctly', () => {
-    expect(simplify({
-        numerator: 46,
-        denominator: 34
-    })).toStrictEqual({
-        numerator: 23,
-        denominator: 17
-    });
+test('should simplify 3/12 correctly', () => {
+  expect(simplify({
+    numerator: 3,
+    denominator: 12
+  })).toStrictEqual({
+    numerator: 1,
+    denominator: 4
+  });
 });
 
-test('should return 1/5', () => {
-    expect(simplify({
-        numerator: 1,
-        denominator: 5
-    })).toStrictEqual({
-        numerator: 1,
-        denominator: 5
-    });
+test('should simplify 6/21', () => {
+  expect(simplify({
+    numerator: 6,
+    denominator: 21
+  })).toStrictEqual({
+    numerator: 2,
+    denominator: 7
+  });
 });
 
-test('should simplify 24/12 correctly', () => {
-    expect(simplify({
-        numerator: 24,
-        denominator: 12
-    })).toStrictEqual({
-        numerator: 2,
-        denominator: 1
-    });
+test('should simplify 24/40 correctly', () => {
+  expect(simplify({
+    numerator: 24,
+    denominator: 40
+  })).toStrictEqual({
+    numerator: 3,
+    denominator: 5
+  });
 });
 
-test('should simplify 4/8 correctly', () => {
-    expect(simplify({
-        numerator: 4,
-        denominator: 8
-    })).toStrictEqual({
-        numerator: 1,
-        denominator: 2
-    });
+test('should simplify 36/72 correctly', () => {
+  expect(simplify({
+    numerator: 36,
+    denominator: 72
+  })).toStrictEqual({
+    numerator: 1,
+    denominator: 2
+  });
 });
