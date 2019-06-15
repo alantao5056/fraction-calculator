@@ -6,6 +6,8 @@ const getOperator = function (equation) {
     operator = '+';
   } else if (equation.indexOf('x') != -1) {
     operator = 'x';
+  } else if (equation.indexOf('÷') != -1) {
+    operator = '÷';
   }
   return operator;
 };

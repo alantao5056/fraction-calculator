@@ -42,7 +42,11 @@ const multiplyFraction = function (fraction1, fraction2) {
 };
 
 const divideFraction = function (fraction1, fraction2) {
-
+  let result = {
+    numerator: fraction1.numerator * fraction2.denominator,
+    denominator: fraction1.denominator * fraction2.numerator
+  };
+  return mixedNumber(simplify(result));
 }
 
-module.exports = { addFraction, subtractFraction, multiplyFraction };
+module.exports = { addFraction, subtractFraction, multiplyFraction, divideFraction };
